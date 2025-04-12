@@ -1,24 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const projects = [
-  {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio to showcase my projects and skills.',
-    techStack: ['React', 'Tailwind CSS', 'Framer Motion'],
-    githubLink: 'https://github.com/your-username/portfolio',
-    liveLink: 'https://your-portfolio-link.com',
-    image: 'path/to/image1.jpg',
-  },
-  {
-    title: 'E-commerce App',
-    description: 'A full-stack e-commerce application with payment integration.',
-    techStack: ['React', 'Node.js', 'MongoDB'],
-    githubLink: 'https://github.com/your-username/ecommerce',
-    liveLink: 'https://ecommerce-demo.com',
-    image: 'path/to/image2.jpg',
-  },
-];
+import { projects } from '../constants/projects';
 
 const Projects = () => {
   return (
@@ -31,7 +13,7 @@ const Projects = () => {
             className="bg-white dark:bg-slateGray rounded-lg shadow-lg overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-48 bg-cover" />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-sm text-slateGray dark:text-lightGray mb-4">{project.description}</p>
